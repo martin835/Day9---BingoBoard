@@ -1,21 +1,8 @@
 
 
 window.onload = function() {
-    createFields()
-
-   
-   
-    //let randomNumber = 8
-   
-    
+    createFields()    
 }
-
-
-
-
-
-
-
 
 const createFields = function() {
 
@@ -47,8 +34,6 @@ const generateRandomNumber = function () {
     const randomNumber = Math.floor(Math.random() * 77);
     
    
-
-
     let randomNumberNode = document.getElementById("random-number-container")
     randomNumberNode.textContent = randomNumber
 
@@ -64,6 +49,12 @@ const generateRandomNumber = function () {
     } */
 
     let fieldsNode = document.getElementsByClassName('field')
+   
+
+    /* let fieldsMatched = document.getElementsByClassName('matched') 
+    if(fieldsMatched[0] !== undefined) {
+        fieldsMatched[0].classList.remove('matched')
+    } */
 
     for (i = 0; i < fieldsNode.length; i++) {
         if (randomNumber.toString() === fieldsNode[i].innerText) {
@@ -71,7 +62,7 @@ const generateRandomNumber = function () {
         }
     }
 
-    
+   
 }
 
 
