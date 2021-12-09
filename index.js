@@ -1,7 +1,8 @@
 
 
 window.onload = function() {
-    createFields()    
+    createFields()
+        
 }
 
 const createFields = function() {
@@ -23,39 +24,40 @@ const createFields = function() {
 }
 
 
-/* const arr = []
+const arr = []
 
-for (i = 1; i <= 76; i++) {
-    arr.push(i);
-} */
-
-
-const generateRandomNumber = function () {
-    const randomNumber = Math.floor(Math.random() * 77);
+    for (i = 1; i <= 76; i++) {
+        arr.push(i)
+    }
     
-   
+
+ 
+const generateRandomNumber = function () {
+    let randomNumber = Math.floor(Math.random() * (arr.length+1));
+    randomNumber = arr[(randomNumber-1)]
+    console.log(randomNumber)
     let randomNumberNode = document.getElementById("random-number-container")
     randomNumberNode.textContent = randomNumber
 
-    /* for (i = 0; i < arr.length; i++) {
+    
+    for (i = 0; i < arr.length; i++) {
         if (arr[i] === randomNumber) {
            
-            console.log(arr.length)
-            console.log(arr[i])
-            arr.splice(i,1)
-            console.log(arr)
-            console.log(arr.length)
+           
+            arr.splice(i,1)[0]
+           
         }
-    } */
+    }
 
     let fieldsNode = document.getElementsByClassName('field')
    
+    //IF ONLY ONE FIELD SHOULD BE SELECTED UNCOMMENT THIS: 
 
-    /* let fieldsMatched = document.getElementsByClassName('matched') 
+   /*  let fieldsMatched = document.getElementsByClassName('matched') 
     if(fieldsMatched[0] !== undefined) {
         fieldsMatched[0].classList.remove('matched')
-    } */
-
+    }
+ */
     for (i = 0; i < fieldsNode.length; i++) {
         if (randomNumber.toString() === fieldsNode[i].innerText) {
             fieldsNode[i].classList.add("matched")            

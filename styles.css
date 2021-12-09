@@ -45,3 +45,22 @@ h1 {
     border-color: #00db71;
     background-color: #00db7175;
 }
+
+button {
+    padding: 5px;
+    margin: 15px;
+    background-color: #00db7175;
+    color: white;
+    border-color: #00db7175 ;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 5px;   
+}
+
+#random-number-container {
+    padding: 5px;
+    margin: 0px 15px 0px 15px;
+    font-weight: bold;
+    font-size: 1.5em;
+   
+}
